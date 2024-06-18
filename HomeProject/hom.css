@@ -1,0 +1,461 @@
+@import url(‘https://fonts.googleapis.com/css?family=Poppins’);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins',sans-serif;
+    height: 100vh;
+}
+.nav-bar{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgb(14, 13, 13);
+
+}
+
+.nav-bar .left-nav{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    
+}
+.nav-bar .right-nav{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.right-nav .inpt
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 450px;
+    height: 45px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(12, 12, 12);
+}
+input
+{
+    border: none;
+    outline: none;
+    position: relative;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+    
+}
+input::placeholder
+{
+    font-size: 15px;
+    position: relative;
+    left: 10px;
+}
+i{
+    margin: 5px;
+    font-size: 17px;
+    color: white;
+}
+.right-nav button{
+    position: relative;
+    left: 80px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius:5px;
+}
+.popup
+{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 440px;
+    height: 450px;
+    padding: 30px 40px;
+    background: transparent;
+    backdrop-filter:blur(18px);
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 450ms ease-in-out 0ms;
+}
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 450ms ease-in-out 0ms;
+}
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup .wrapper h2 {
+    text-align: center;
+    color: #fff;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+    text-shadow: 0 0 19px black;
+}
+.wrapper .input-box
+{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.wrapper .input-boxNA
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input:focus
+{
+	box-shadow: 0 0 9px black;
+}
+.nm
+{
+    position: absolute;
+    width: 49%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.age
+{
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.nm::placeholder
+{
+    color: #fff;
+    font-size: 13px;
+}
+.age::placeholder
+{
+    color: #fff;
+    font-size: 13px;
+}
+.nm:focus
+{
+	box-shadow: 0 0 8px black;
+}
+.age:focus
+{
+	box-shadow: 0 0 8px black;
+}
+
+.input-box input::placeholder
+{
+    color: #fff;
+    font-size: 13px;
+}
+
+.wrapper .botton
+{
+    position: relative;
+    width: 340px;
+    height: 45px;
+    /* background-color: aqua; */
+}
+
+
+.wrapper .btn1
+{
+    position: absolute;
+    right: 47%;
+    width: 45%;
+    margin-left: 50px;
+    height: 40px;
+    background-color: #333;
+    border: 2px solid rgba(255, 255, 255,.2);;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+.wrapper .btn2
+{
+    position: absolute;
+    left: 44%;
+    width: 45%;
+    margin-left: 50px;
+    height: 39px;
+    background-color: palegoldenrod;
+    border: 2px solid rgba(255, 255, 255,.2);;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn1:hover
+{
+    background: transparent;
+    color: white;
+    transition: all ease 0.5s;
+    box-shadow: 0 0 10px black;
+}
+.btn2:hover
+{
+    background: transparent;
+    color: white;
+    transition: all ease 0.5s;
+    box-shadow: 0 0 10px black;
+}
+ul{
+    list-style: none;
+    background: transparent;
+}
+ul li .hed{
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+    display: inline;
+    position: relative;
+    top: 5px;
+    
+}
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 20px;
+    color: white;
+    text-decoration:none;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.7s;
+    border-radius: 20px;
+}
+ul li ul.dropDown{
+    width: 100px;
+    background-color: #3a7bd5;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    border-radius: 20px;
+    background:transparent;
+    box-shadow: 0 0 15px rgba(0,0,0,1);
+}
+ul li:hover ul.dropDown{
+    display: block;
+}
+
+ul li.main{
+    margin: 30px;
+}
+.user-pic{
+    position: relative;
+    left: 50px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+   
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    width: 270px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    border-radius: 20px;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 9px 3px #9d2dc9;
+    border:1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info h3{
+    color: #ccc;
+    font-weight: 500;
+}
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ccc;
+    margin: 12px 0;
+}
+.sub-menu-link p{
+    width: 100%;
+}
+.sub-menu-link img{
+    width: 40px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+.sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+    color: #fff;
+    transform: translateX(5px);
+}
+.sub-menu-link:hover p{
+    color: #fff;
+    font-weight: 600;
+}
+ .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    left: 695px;
+    width: 220px;
+
+    background: transparent;
+ }
+.content p{
+    border: none;
+    border-radius: none;
+    
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    animation: typing 4s forwards infinite alternate,
+            blinking 0.9s infinite alternate;
+}
+
+@keyframes typing{
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+@keyframes blinking{
+    0%, 100%{
+        border-right: 2px solid transparent;
+    }
+    50%{
+        border-right: 2px solid #fff;
+    }
+}
